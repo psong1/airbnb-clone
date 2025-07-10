@@ -11,7 +11,7 @@ Listing.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    hostId: {
+    host_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
