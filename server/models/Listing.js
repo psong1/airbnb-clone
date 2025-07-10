@@ -37,6 +37,17 @@ Listing.init(
         len: [10, 255],
       },
     },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 50],
+      },
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     price_per_night: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,

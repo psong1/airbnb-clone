@@ -10,8 +10,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => {
-    console.log(`App listening on PORT ${PORT}`);
+if (require.main === module) {
+  sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => {
+      console.log(`App listening on PORT ${PORT}`);
+    });
   });
-});
+}
+
+module.exports = app;
