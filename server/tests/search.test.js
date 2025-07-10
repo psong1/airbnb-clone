@@ -17,7 +17,7 @@ describe("GET /api/listings", () => {
     expect(res.statusCode).toBe(200);
     expect(
       res.body.every(
-        (isting) => isting.city.toLowerCase() === city.toLowerCase()
+        (listing) => listing.city.toLowerCase() === city.toLowerCase()
       )
     ).toBe(true);
   });
@@ -39,7 +39,9 @@ describe("GET /api/listings", () => {
     const zip = listings[2].address.split(",")[2]?.trim().split(" ")[1];
     const res = await request(app).get(`/api/listings?zip=${zip}`);
     expect(res.statusCode).toBe(200);
-    expect(res.body.every((l) => l.address.includes(zip))).toBe(true);
+    expect(res.body.every((listing) => listing.address.includes(zip))).toBe(
+      true
+    );
   });
 
   it("combines city, state, and zip filters", async () => {
