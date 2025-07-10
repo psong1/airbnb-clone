@@ -29,8 +29,8 @@ ListingAmenity.init(
     underscored: true,
     modelName: "listing_amenity",
     indexes: [
-      { unique: true, field: ["listing_id", "amenity_id"] },
-      { fields: "amenity_id" },
+      { unique: true, fields: ["listing_id", "amenity_id"] },
+      { fields: ["amenity_id"] },
     ],
   }
 );

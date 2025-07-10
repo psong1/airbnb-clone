@@ -4,22 +4,24 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seed/index.js"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
+    "jest": "^30.0.4",
     "mysql2": "^3.14.1",
     "sequelize": "^6.37.7"
   }
