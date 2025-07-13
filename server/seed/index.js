@@ -18,7 +18,7 @@ const {
   amenities,
   listing_amenities,
   images,
-} = require("../seed/seedData");
+} = require("./seedData");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
