@@ -1,0 +1,68 @@
+.payment-form-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 3rem auto;
+  padding: 2.2rem 2.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Montserrat", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.payment-form-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.payment-form-container label {
+  display: block;
+  margin: 1.1rem 0 0.3rem 0.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.payment-form-container input,
+.payment-form-container select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  background: #fafafa;
+  transition: border 0.2s;
+  color: black;
+}
+
+.payment-form-container input:focus,
+.payment-form-container select:focus {
+  border: 1.5px solid #ff385c;
+  outline: none;
+}
+
+.payment-form-container button {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #ff385c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  transition: background 0.2s;
+}
+
+.payment-form-container button:hover {
+  background: #e11d48;
+}
+
+.payment-form-container p {
+  color: #e11d48;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}

@@ -1,0 +1,53 @@
+.review-form-container {
+  max-width: 400px;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.review-form-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+
+.review-form-container input,
+.review-form-container textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+  background: #fafafa;
+  transition: border 0.2s;
+  color: black;
+}
+
+.review-form-container input:focus,
+.review-form-container textarea:focus {
+  border: 1.5px solid #ff385c;
+  outline: none;
+}
+
+.review-form-container button {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #ff385c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background 0.2s;
+}
+
+.review-form-container button:hover {
+  background: #e11d48;
+}

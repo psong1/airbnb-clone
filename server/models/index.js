@@ -6,7 +6,6 @@ const Listing = require("./Listing");
 const Image = require("./Image");
 const Booking = require("./Booking");
 const Amenity = require("./Amenity");
-const Notification = require('./Notification');
 const sequelize = require("../config/connection");
 
 User.hasMany(Listing, { foreignKey: "host_id", as: "listings" });
@@ -27,8 +26,8 @@ Review.belongsTo(Booking, { foreignKey: "booking_id", as: "booking" });
 User.hasMany(Review, { foreignKey: "user_id", as: "reviews" });
 Review.belongsTo(User, { foreignKey: "user_id", as: "user" });
 
-Listing.hasMany(Image, { foreignKey: "listing_id", as: "images" });
-Image.belongsTo(Listing, { foreignKey: "listing_id", as: "listing" });
+Listing.hasMany(Image, { as: "images", foreignKey: "listing_id" });
+Image.belongsTo(Listing, { as: "listing", foreignKey: "listing_id" });
 
 Listing.belongsToMany(Amenity, {
   through: ListingAmenity,
@@ -44,9 +43,6 @@ Amenity.belongsToMany(Listing, {
   as: "listings",
 });
 
-User.hasMany(Notification, { foreignKey: 'userId', as: 'notifications' });
-Notification.belongsTo(User, { foreignKey: 'userId', as: 'user' });
-
 module.exports = {
   sequelize,
   User,
@@ -57,5 +53,4 @@ module.exports = {
   Image,
   Amenity,
   ListingAmenity,
-  Notification,
 };
