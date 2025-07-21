@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Listing, User } = require("../../models");
+const { Listing, User, Image } = require("../../models");
 
 router.get("/listings", async (req, res) => {
   try {
@@ -23,6 +23,7 @@ router.get("/listings", async (req, res) => {
       where: whereClause,
       include: [
         { model: User, as: "host", attributes: { exclude: ["password"] } },
+        { model: Image, as: "images" },
       ],
     });
 
@@ -37,6 +38,7 @@ router.get("/listings/:id", async (req, res) => {
     const listing = await Listing.findByPk(req.params.id, {
       include: [
         { model: User, as: "host", attributes: { exclude: ["password"] } },
+        { model: Image, as: "images" },
       ],
     });
     if (!listing) {
