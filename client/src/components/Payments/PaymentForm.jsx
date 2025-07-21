@@ -27,12 +27,12 @@ export default function PaymentForm({ user }) {
 
     try {
       await createPayment({
-        bookingId: parseInt(bookingId),
+        booking_id: parseInt(bookingId),
         amount: parseFloat(amount),
         method,
       });
 
-      console.log("Payment submitted!");
+      alert("Payment submitted!");
       navigate("/dashboard");
     } catch (err) {
       setError(err.message || "Failed to submit payment.");
