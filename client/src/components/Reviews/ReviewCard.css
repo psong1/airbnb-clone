@@ -1,0 +1,20 @@
+.review-card {
+  border-bottom: 1.5px solid #ececec;
+  margin-bottom: 1.1rem;
+  padding-bottom: 1rem;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  color: black;
+}
+
+.review-card strong {
+  color: #ff385c;
+  font-weight: 600;
+}
+
+.review-card small {
+  color: #888;
+  font-size: 0.98rem;
+}

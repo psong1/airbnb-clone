@@ -25,3 +25,8 @@ export function updateBooking(id, newData) {
 export function deleteBooking(id) {
   return apiFetch(`/api/bookings/${id}`, { method: "DELETE" });
 }
+
+export function getBookingsForUser(userId) {
+  // This assumes the backend supports filtering by guest_id or host_id via query params
+  return apiFetch(`/api/bookings?user_id=${userId}`);
+}

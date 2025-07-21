@@ -4,7 +4,7 @@ const { Review, Booking, User } = require("../../models");
 
 router.get("/listings/:listingId/reviews", async (req, res) => {
   try {
-    const review = await Review.findAll({
+    const reviews = await Review.findAll({
       include: [
         {
           model: Booking,

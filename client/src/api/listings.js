@@ -26,3 +26,7 @@ export function updateListing(id, newData) {
 export function deleteListing(id) {
   return apiFetch(`/api/listings/${id}`, { method: "DELETE" });
 }
+
+export function getListingsForUser(userId) {
+  return getAllListings({ host_id: userId });
+}
